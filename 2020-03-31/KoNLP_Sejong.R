@@ -31,9 +31,10 @@ head(sort(word_count, decreasing=TRUE), 10)
 
 wordcloud(names(word_count),
           freq=word_count,
-          scale = c(6, 0.3),
+          scale = c(10, 0.1),
           min.freq = 3,
           random.order = F,
           rot.per = .1,
           colors = pal2)
+
 
