@@ -1,0 +1,56 @@
+---
+title: "Figure Sizes"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+그래프의 크기를 fig.width와 fig.height를 이용해 아래처럼 조정
+
+### Chart A
+
+```{r, fig.width=12, fig.height=7}
+plot(cars)
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r, fig.width=5, fig.height=5}
+plot(pressure)
+```
+
+### Chart C
+
+```{r, fig.width=10, fig.height=7}
+plot(airmiles)
+```
+
+
+### Chart 5 (10, 7)
+
+```{r}
+library(shiny)
+
+renderTable({
+  head(mtcars, 10)
+})
+```
+
+```{r}
+DT::datatable(mtcars,
+              options = list(pageLength = 25,
+                             bPaginate = T),
+              filter = "top")
+```
+

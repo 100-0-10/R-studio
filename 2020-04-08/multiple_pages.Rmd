@@ -1,0 +1,55 @@
+---
+title: "Multiple Pages"
+output:
+  flexdashboard::flex_dashboard:
+    orientations: columns
+    source_code: embed
+    navbar:
+      - { title: "About", href: "https://example.com/about", align: right}
+      - { icon: "fa-pencil", href: "https://www.naver.com", align: right}
+---
+Page 1
+======================================
+
+This is an example. As you can see, flexdashboard can have text annotations.
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(knitr)
+```
+
+Column1
+-----------------------------------------------------------------------
+### Text Annotation
+asd fjasld kf jasdfklasjdlfksaf
+asd fkasjdfklasjdf;lkasjdfaksjdflksadf
+ asdfklasjdlfkasjdflksajdfklasdjfkasldfjaskldf jaskdf
+ 
+### Chart A
+
+```{r}
+
+```
+
+Column2
+-----------------------------------------------------------------------
+
+Page2 {data-orientation=rows}
+=====================================
+
+### ggplot2 chart1
+
+```{r}
+
+```
+
+
+
+
+### Chart C
+
+```{r}
+
+```
+
